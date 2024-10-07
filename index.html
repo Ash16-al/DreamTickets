@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    
-    <h1>Welcome to DreamTickets</h1>
-    
+<body class="bg-red-200 text-sm">
+    <header>
+        <nav class="flex items-center justify-between font-bold">
+            <figure>
+                <img src="Diseño.png/Diseño sin título (5).png" alt="" width="20%">
+            </figure>
+            <ul class="position">
+                <li class="text-slate-700 text-base">&#128269;<a href="#">Barra de búsqueda</a></li>
+            </ul>
+            <ul>
+                <li class="text-slate-700 text-base"><a href="#">Inicio</a></li>
+                <li class="text-slate-700 text-base"><a href="#">Conciertos</a></li>
+                <li class="text-slate-700 text-base"><a href="SignUp.html">Sign Up</a></li>
+                <li class="text-slate-700 text-base"><a href="SignIn.html">Sign In</a></li>
+                <li class="text-slate-700 text-base"><a href="#">&#128722;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body class="flex flex-col items-center">
+        <div class="flex justify-center mb-4 image-container">
+            <div class="bg-black p-4 rounded">
+                <img src="Diseño.png/Diseño sin título (4).png" alt="" class="w-full max-w-4xl h-auto">
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center space-x-4">
+            <div class="bg-black p-2 rounded">
+                <img src="Diseño.png/mon_laferte_gia_chile.png" alt="" class="w-72 h-72 object-cover mb-4">
+            </div>
+            <div class="bg-black p-2 rounded">
+                <img src="Diseño.png/images.png" alt="" class="w-72 h-72 object-cover mb-4">
+            </div>
+            <div class="bg-black p-2 rounded">
+                <img src="Diseño.png/3019976.png" alt="" class="w-72 h-72 object-cover mb-4">
+            </div>
+        </div>
+
+        <div class="mt-8 px-5">
+            <h2 class="text-xl font-bold text-pink-800">Próximos Eventos</h2>
+            <div class="flex flex-wrap justify-center mt-4">
+                <div class="bg-black p-4 rounded w-80 m-2">
+                    <h3 class="text-white">Concierto de Mon Laferte</h3>
+                    <p class="text-gray-400">Fecha: 20 de Noviembre 2024</p>
+                </div>
+                <div class="bg-black p-4 rounded w-80 m-2">
+                    <h3 class="text-white">Concierto de Carlos Rivera</h3>
+                    <p class="text-gray-400">Fecha: 2 de diciembre 2024</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <p>&copy; 2024 DreamTickets. Todos los derechos reservados.</p>
+        <div>
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Facebook</a>
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>

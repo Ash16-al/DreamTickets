@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu CSS si lo necesitas -->
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form action="/ruta-del-servidor" method="POST">
+            <div class="mb-4">
+                <div class="flex">
+                    <label for="email" class="block text-gray-700 w-1/3">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required class="border border-gray-300 p-3 rounded-lg w-2/3">
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex">
+                    <label for="contrasena" class="block text-gray-700 w-1/3">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required class="border border-gray-300 p-3 rounded-lg w-2/3">
+                </div>
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+        </form>
+        <p class="mt-4">¿No tienes una cuenta? <a  href="SignUp.html"  href="/registrarse">Regístrate aquí</a>.</p>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3c5e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgb(160, 75, 94);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px hsl(313, 39%, 65%);
+            width: 300px; /* Ancho del formulario */
+        }
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+        .flex {
+            display: flex;
+            align-items: center; /* Alinea verticalmente el contenido */
+        }
+        .btn {
+            background-color: #d47ec2; /* Color de fondo del botón */
+            color: rgb(59, 16, 43); /* Color del texto */
+            padding: 10px 15px; /* Espaciado del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar */
+            width: 100%; /* Botón ocupa todo el ancho */
+        }
+        .btn:hover {
+            background-color: #6e0a2c; /* Color al pasar el mouse */
+        }
+
+    </style>
+</body>
+</html>
