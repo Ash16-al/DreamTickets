@@ -7,30 +7,82 @@ body {
 header {
     background-color: rgba(223, 147, 166, 0.8);
     padding: 1rem; 
-    margin-bottom: 26px; 
+    margin-bottom: 22px; 
+}
+
+.buscar {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    margin-left: -600px; 
+    }
+
+
+.buscar input {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background:  #641838;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buscar:hover input {
+    width: 240px;
+}
+
+.buscar input:focus {
+    width: 240px;
 }
 
 nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.logo {
+    margin-right: 20px; 
+}
+
+ul {
+    display: flex; 
+    padding: 0; 
+    list-style: none; 
 }
 
 ul li {
-    display: inline-block;
-    padding: 60px; 
-    padding-left: 0;
+    margin: 0 10px; 
 }
 
 a {
     text-decoration: none;
     color: white; 
+    padding: 5px 10px; 
     transition: color 0.3s; 
 }
 
 a:hover {
     color: #641838; 
 }
+
 
 .position {
     position: relative;

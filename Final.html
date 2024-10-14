@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body class="bg-pink-100 flex items-center justify-center h-screen m-0">
+    <div class="bg-pink-300 text-white p-8 rounded-lg shadow-lg w-80">
+        <h2 class="text-2xl font-bold mb-6 text-center">Pago final</h2>
+        <form id="paymentForm" onsubmit="return showModal(event)">
+            <div class="mb-4">
+                <label for="numero_tarjeta" class="block text-gray-950">Número de tarjeta:</label>
+                <input type="text" id="numero_tarjeta" name="numero_tarjeta" class="border border-gray-300 p-3 rounded-lg w-full mt-1" placeholder="Introduce tu número de tarjeta">
+            </div>
+            <div class="mb-4">
+                <label for="contrasena" class="block text-gray-950">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" class="border border-gray-300 p-3 rounded-lg w-full mt-1" placeholder="Introduce tu contraseña">
+            </div>
+            <button type="submit" class="bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded w-full transition duration-300">Completar Pago</button>
+        </form>
+        <p class="mt-4 text-center text-gray-950"><a href="index.html">Volver a la página principal</a>.</p>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <h2 class="text-lg font-bold text-center">Pago completado</h2>
+            <p class="text-center">Gracias por tu compra.</p>
+            <div id="qrCode" class="flex justify-center my-4"></div>
+            <input type="text" id="userNote" placeholder="Escribe una nota aquí..." class="border border-gray-300 p-2 rounded w-full mt-4" />
+            <div class="flex justify-end mt-4">
+                <button onclick="closeModal()" class="bg-pink-500 hover:bg-pink-700 text-white py-1 px-3 rounded">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showModal(event) {
+            event.preventDefault(); // Previene el envío del formulario
+            $('#qrCode').empty(); // Limpiar el div del código QR
+            $('#qrCode').qrcode({
+                text: "Pago completado: " + new Date().toLocaleString(),
+                width: 100,
+                height: 100
+            });
+            $('#myModal').removeClass('hidden'); // Muestra el modal
+        }
+
+        function closeModal() {
+            $('#myModal').addClass('hidden'); // Oculta el modal
+        }
+
+        $(window).on('click', function(event) {
+            const modal = $('#myModal');
+            if ($(event.target).is(modal)) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+

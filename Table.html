@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Resumen de Compra</title>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">Resumen de Compra</h1>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <table class="min-w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2 bg-gray-200">Concierto</th>
+                        <th class="border px-4 py-2 bg-gray-200">Asiento</th>
+                        <th class="border px-4 py-2 bg-gray-200">Precio Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-2">Kimberly Loaiza</td>
+                        <td class="border px-4 py-2">C1</td>
+                        <td class="border px-4 py-2">$50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="Venta.html" class="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition duration-300">Modificar la compra</a>
+        </div>
+    </div>
+    
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">Selecciona tu método de pago</h1>
+    
+        <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <table class="min-w-full border-collapse">
+                <tbody>
+                    <tr>
+                        <th class="border px-4 bg-gray-200 py-2 text-left w-1/2">Pago con tarjeta</th>
+                        <td class="border px-4 py-2 w-1/2 flex items-center">
+                            <input type="checkbox" id="tarjeta" name="metodo_pago" class="mr-2">
+                            <label for="tarjeta" class="flex items-center">
+                                <img src="Diseño.png/icons8-visa-48.png" alt="Tarjeta" class="h-10 w-10 inline-block mr-1">
+                            <input type="checkbox" id="tarjeta" name="metodo_pago" class="mr-2">
+                            <label for="tarjeta" class="flex items-center">
+                                <img src="Diseño.png/icons8-mastercard-48.png" alt="MasterCard" class="h-10 w-10 inline-block mr-1">
+                            <input type="checkbox" id="tarjeta" name="metodo_pago" class="mr-2">
+                            <label for="tarjeta" class="flex items-center">
+                                <img src="Diseño.png/icons8-amex-48.png" alt="American Express" class="h-10 w-10 inline-block">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="border px-4 bg-gray-200 py-2 text-left w-1/2">PayPal</th>
+                        <td class="border px-4 py-2 w-1/2 flex items-center">
+                            <input type="checkbox" id="paypal" name="metodo_pago" class="mr-2">
+                            <label for="paypal" class="flex items-center">
+                                <img src="Diseño.png/icons8-paypal-48.png" alt="PayPal" class="h-10 w-10 inline-block">
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+        <div class="text-center mt-4">
+            <a href="Final.html" class="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition duration-300">Enviar</a>
+        </div>
+    </div>
+</body>
+</html>

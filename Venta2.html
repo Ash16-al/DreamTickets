@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos</title>
+    <script src="https://cdn.tailwindcss.com""></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">Compra de Boletos para el Concierto</h1>
+        
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">Elige tu Asiento</h2>
+            <div class="grid grid-cols-5 gap-2 mb-4">
+                <!-- Asientos -->
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="50">
+                    A1
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="50">
+                    A2
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="50">
+                    A3
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="50">
+                    A4
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="50">
+                    A5
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="65">
+                    B1
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="65">
+                    B2
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="65">
+                    B3
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="65">
+                    B4
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="65">
+                    B5
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="70">
+                    C1
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="70">
+                    C2
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="70">
+                    C3 
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="70">
+                    C4
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="70">
+                    C5
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="75">
+                    D1
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="75">
+                    D2
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="75">
+                    D3
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="75">
+                    D4
+                </div>
+                <div class="asiento w-full h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center bg-pink-200 cursor-pointer hover:bg-pink-300" data-precio="75">
+                    D5
+                </div>
+            </div>
+
+            <h2 class="text-xl font-semibold mb-2">Resumen de Compra</h2>
+            <p class="mb-2">Asiento Seleccionado: <span id="asientoSeleccionado">Ninguno</span></p>
+            <p class="mb-4">Precio: $<span id="precioSeleccionado">0.00</span></p>
+            <button class="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600 mb-4"><a href="Table.html">Comprar Boletos</a></button>
+
+            <h1 class="p-2 font-bold">Ubicación</h1>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.3334665058005!2d-89.21799762556053!3d13.698242198532597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63305b84161529%3A0xffc460bda0c1f348!2zSm9yZ2Ug4oCcRWwgTcOhZ2ljb-KAnSBHb256w6FsZXogTmF0aW9uYWwgU3RhZGl1bQ!5e0!3m2!1sen!2ssv!4v1728870499156!5m2!1sen!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+
+    <script>
+        // Script para seleccionar asiento
+        const asientos = document.querySelectorAll('.asiento');
+        const asientoSeleccionado = document.getElementById('asientoSeleccionado');
+        const precioSeleccionado = document.getElementById('precioSeleccionado');
+
+        asientos.forEach(asiento => {
+            asiento.addEventListener('click', () => {
+                // Remover clase de selección de todos los asientos
+                asientos.forEach(a => {
+                    a.classList.remove('bg-pink-400');
+                });
+
+                // Añadir clase de selección al asiento clickeado
+                asiento.classList.add('bg-pink-400');
+
+                // Actualizar el texto del asiento y el precio
+                asientoSeleccionado.textContent = asiento.textContent;
+                precioSeleccionado.textContent = asiento.getAttribute('data-precio');
+            });
+        });
+    </script>
+</body>
+</html>
